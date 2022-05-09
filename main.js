@@ -22,4 +22,4 @@ ScrollReveal({
   origin: 'top',
   distance: '30px',
   duration: 1300,
-}).reveal('#home , #home , #home .dados ,#services,#services header , #services .card');
+}).reveal('#home , #home , #home .dados ,#services,#services header , #services .card , #sobre , #sobre header , #sobre .content , #sobre img , #contato , #contato .content , #contato img , footer   ');

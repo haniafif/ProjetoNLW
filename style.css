@@ -10,6 +10,7 @@
   --corfundo: #dce9e2;
   --navheight: 7.2rem;
   --corfundo2: #F7F9F9;
+  --corfundo3 : #FFFAF1;
 
   margin: 0;
   padding: 0;
@@ -20,11 +21,15 @@
 *, html {
   scroll-behavior: smooth !important;
 }
+img{
+  max-width: 100%;
+}
 
 .wrapper {
   width: 37.5rem;
   margin-inline: auto;
   padding-inline: 2.4rem;
+  max-width: 100%;
 }
 
 ul{
@@ -33,6 +38,31 @@ ul{
 
 section{
   padding-block: 10rem;
+}
+
+h2{
+  font-size: 3rem;
+  line-height: 3.9rem;
+  color: var(--corsegundariatitulo);
+  margin-bottom: 2.4rem;
+
+}
+
+h4{
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--corprimaria);
+  margin-bottom: 1.6rem;
+
+}
+
+p{
+  font-size: 1.8rem;
+  margin-bottom: 6rem;
+  color: var(--corsegundariaparagrafo);
+
 }
 /*  =================================== HOME========================================== */
 body {
@@ -154,10 +184,9 @@ nav {
   position: fixed;
   padding: 1.6rem 2.4rem;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   height: var(--navheight);
   z-index: 100;
+  width: 100%;
 }
 
 nav > .wrapper {
@@ -195,7 +224,7 @@ body.menu-expanded {
 }
 
 body.menu-expanded > :not(nav) {
-  display: none;
+  visibility: hidden;
 }
 
 .menu ,
@@ -226,10 +255,6 @@ body.menu-expanded .menu {
 
   transform: translateY(0%);
 
-}
-
-body.menu-expanded nav {
-  position: relative;
 }
 
 .sociallinks {
@@ -326,4 +351,107 @@ body.menu-expanded button  path {
 #services .cards h3{
   margin-block: 1.6rem;
   font-size: 2.4rem;
+}
+
+/*  =================================== Sobre========================================== */
+#sobre img{
+  border: 1px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 6rem;
+}
+
+#sobre {
+  background-color: var(--corfundo3);
+}
+
+#sobre h2{
+  text-align: left;
+}
+
+#sobre h4{
+  text-align: left;
+}
+
+#sobre p{
+  text-align: left;
+}
+
+
+/*  =================================== Contato ========================================== */
+#contato li{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: left;
+  margin-bottom: 3.2rem;
+  gap: 1.6rem;
+}
+
+#contato ul {
+  display: flex;
+  align-items: centr;
+  gap: .8rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  gap: 1.6rem;
+  color: var(--corsegundariaparagrafo);
+
+}
+
+#contato button{
+  display: flex;
+  margin-bottom: 6rem;
+  border-radius: 4rem;
+  border: none;
+  background-color: var(--corprimaria);
+  color: white;
+  cursor: pointer;
+  width: 26.7rem;
+  justify-content: center;
+  align-items: center;
+  height: 5.6rem;
+  padding: 1.6rem 3.2rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  gap: 1.6rem;
+}
+
+#contato h2{
+  margin-bottom: 3.2rem;
+  text-align: left;
+}
+
+#contato img{
+  margin-bottom: 8rem;
+}
+/*  =================================== footer ========================================== */
+footer{
+  background-color: var(--corprimaria);
+}
+
+#logo{
+  display: flex;
+  justify-content: left;
+  padding-top: 6rem;
+  padding-left: 2.6rem;
+  margin-bottom: 2.4rem;
+}
+
+footer p {
+  text-align: left;
+  color: white;
+  margin-left: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+footer li{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 2rem;
+  padding: 3.2rem 0 6rem 2.4rem;
+  height: 2.4rem;
 }
