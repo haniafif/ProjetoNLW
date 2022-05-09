@@ -71,6 +71,7 @@ body {
   overflow: overlay;
   height: 100%;
   background-color: var(--corfundo2);
+  width: 100%;
 }
 
 #home{
