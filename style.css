@@ -1,0 +1,329 @@
+/*  =================================== GERAL ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+* {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 62.5%;
+  --corprimaria: #00856f;
+  --corsegundariatitulo: #212529;
+  --corsegundariaparagrafo: #495057;
+  --corfundo: #dce9e2;
+  --navheight: 7.2rem;
+  --corfundo2: #F7F9F9;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, html {
+  scroll-behavior: smooth !important;
+}
+
+.wrapper {
+  width: 37.5rem;
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+
+ul{
+  list-style: none;
+}
+
+section{
+  padding-block: 10rem;
+}
+/*  =================================== HOME========================================== */
+body {
+  font-size: 1.6rem;
+  text-align: center;
+  overflow: overlay;
+  height: 100%;
+  background-color: var(--corfundo2);
+}
+
+#home{
+  padding-top: calc(4.1rem + var(--navheight));
+}
+
+#home::before {
+  content: "" ;
+  width: 100%;
+  height: calc(118rem + var(--navheight));
+  background-color: var(--corfundo);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+
+
+#home h1 {
+  font-size: 3.4rem;
+  color: var(--corsegundaria);
+  line-height: 130%;
+  margin-bottom: 2.4rem;
+}
+
+#home h3 {
+  font-size: 4.8rem;
+  color: var(--corsegundariatitulo);
+  line-height: 150%;
+  font-weight: 400;
+}
+
+#home h4 {
+  color: var(--corprimaria);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+#home p {
+  font-size: 1.8rem;
+  color: var(--corsegundariaparagrafo);
+  line-height: 150%;
+  font-weight: 400;
+  margin-bottom: 3.2rem;
+}
+
+#home button {
+  background-color: var(--corprimaria);
+
+  border: none;
+  border-radius: 4rem;
+
+  margin-bottom: 6rem;
+
+  height: 6.2rem;
+  width: 26.3rem;
+
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#mulher {
+  display: block;
+  margin-inline: auto;
+  object-position: 0 1rem;
+  width: 26.4rem;
+}
+
+#home .dados {
+  gap: 6rem;
+  width: 32.7rem;
+  background-color: white;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 4rem;
+  border: 1px solid var(--corfundo);
+  border-radius: 0.6rem;
+}
+
+#home .dados > h3 {
+  font-size: 4.8rem;
+  color: var(--corsegundariatitulo);
+  line-height: 130%;
+  margin-bottom: 0.4rem;
+}
+
+#home .dados > p {
+  margin: 0;
+  color: var(--corsegundariaparagrafo);
+  line-height: 150%;
+  font-size: 1.6rem;
+}
+/*  =================================== NAV ========================================== */
+
+nav {
+  display: flex;
+  position: fixed;
+  padding: 1.6rem 2.4rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: var(--navheight);
+  z-index: 100;
+}
+
+nav > .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+nav.scroll {
+  background-color: var(--corprimaria);
+  width: 100%;
+}
+
+nav.scroll #svg1 path {
+  fill: white;
+}
+
+nav.scroll #svg2 path {
+  stroke: white;
+}
+
+.menu{
+  color: black;
+}
+
+nav button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*  =================================== menu-expanded ========================================== */
+body.menu-expanded {
+  overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+  display: none;
+}
+
+.menu ,
+.close-menu 
+ , body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.menu{
+  transform: translateY(100%);
+}
+body.menu-expanded .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--corprimaria);
+  width: 100vw;
+  height: 100vh;
+  padding-top: 3rem;
+
+  transition: transform 300ms;
+
+  transform: translateY(0%);
+
+}
+
+body.menu-expanded nav {
+  position: relative;
+}
+
+.sociallinks {
+  display: flex;
+  flex-direction: row;
+  gap: 3.2rem;
+  justify-content: center;
+
+}
+
+.menu ul:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  margin-top: 6rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  text-align: center;
+  color: white;
+}
+
+.menu ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 2.4rem;
+}
+
+.menu .button{
+  background: white;
+  border-radius: 4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+  color: var(--corprimaria);
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+}
+body.menu-expanded nav button,
+body.menu-expanded .logo{
+  position: relative;
+  z-index: 10;
+}
+
+body.menu-expanded .logo  path {
+  fill: white;
+}
+
+body.menu-expanded button  path {
+  stroke: white;
+}
+
+/*  =================================== Serviços ========================================== */
+#services header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--corprimaria);
+  margin-bottom: 1.6rem;
+}
+
+#services header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+  text-align: center;
+  color: var(--corsegundariatitulo);
+  margin-bottom: 6rem;
+}
+
+#services .cards{
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .cards p{
+  font-size: 1.8rem;
+}
+
+#services .card{
+  padding: 2.4rem;
+  text-align: left;
+  background: white;
+  border: .1rem solid var(--corfundo);
+  border-radius: .6rem;
+}
+
+#services .cards h3{
+  margin-block: 1.6rem;
+  font-size: 2.4rem;
+}
