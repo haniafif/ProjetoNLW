@@ -230,6 +230,10 @@ body.menu-expanded {
   overflow: hidden;
 }
 
+body.menu-expanded #svg1 {
+  padding-left: 0;
+}
+
 body.menu-expanded > :not(nav) {
   visibility: hidden;
 }
