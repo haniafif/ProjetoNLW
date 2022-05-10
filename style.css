@@ -185,29 +185,26 @@ nav {
   height: var(--navheight);
   z-index: 100;
   width: 100%;
+  margin-inline: auto;
+  text-align: center;
+  
+  justify-content: center;
 }
-
-@media screen and (max-width: 360px){
-  #svg1 {
-  width: 8.2rem!important;
-  }
-  }
-
-
-.logo{
-
+#svg1{
+  padding-left: 4.5rem;
 }
-
-
+#svg2{
+  padding-left: -1rem;
+}
 nav > .wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 nav.scroll {
   background-color: var(--corprimaria);
-  width: 100%;
+
 }
 
 nav.scroll #svg1 path {
