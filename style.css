@@ -187,9 +187,9 @@ nav {
   width: 100%;
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 360px){
   #svg1 {
-  width: 8rem!important;
+  width: 8.2rem!important;
   }
   }
 
