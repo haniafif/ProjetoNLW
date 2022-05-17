@@ -44,5 +44,10 @@ ScrollReveal({
   duration: 800,
 }).reveal('#home , #home , #home .dados ,#services,#services header , #services .card , #sobre , #sobre header , #sobre .content , #sobre img , #contato , #contato .content , #contato img , footer   ');
 
-document.webkitRequestFullscreen();
-window.mozRequestFullScreen();
+
+
+document.getElementById("fs").addEventListener("click", () => {
+  document.documentElement.requestFullscreen();
+});
+
+
