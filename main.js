@@ -41,5 +41,8 @@ function closemenu(){
 ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 1300,
+  duration: 800,
 }).reveal('#home , #home , #home .dados ,#services,#services header , #services .card , #sobre , #sobre header , #sobre .content , #sobre img , #contato , #contato .content , #contato img , footer   ');
+
+document.webkitRequestFullscreen();
+window.mozRequestFullScreen();
